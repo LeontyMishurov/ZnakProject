@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="osnova" prefHeight="491.0" prefWidth="704.0" style="-fx-background-color: #3C4954#1E2226;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane fx:id="ploter" layoutX="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="499.0" prefWidth="705.0" style="-fx-background-color: #1E2226;">
+         <children>
+            <ImageView fitHeight="285.0" fitWidth="570.0" layoutX="60.0" layoutY="124.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Znak.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D minX="570.0" minY="285.0" />
+               </viewport>
+            </ImageView>
+            <Text fill="#4c90ff" layoutX="33.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ПЛОЩАДЬ ПЕЧАТИ" wrappingWidth="150.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <MenuButton fx:id="mater" layoutX="26.0" layoutY="85.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="179.0" text="МАТЕРИАЛ" textFill="#4c90ff">
+              <items>
+                <MenuItem fx:id="baner" mnemonicParsing="false" onAction="#setBaner" text="БАНЕР" />
+                <MenuItem fx:id="pvx" mnemonicParsing="false" onAction="#setPVH" text="ПЛЕНКА ПВХ" />
+                  <MenuItem fx:id="Blueback" mnemonicParsing="false" onAction="#setBlueback" text="BLUEBACK" />
+                  <MenuItem fx:id="Holst" mnemonicParsing="false" onAction="#setHolst" text="ХОЛСТ" />
+                  <MenuItem fx:id="Poster" mnemonicParsing="false" onAction="#setPoster" text="ПОСТЕР БЕЛ." />
+                  <MenuItem fx:id="PerfoPvh" mnemonicParsing="false" onAction="#setPerfoPvh" text="ПЕРФО. ПВХ" />
+                  <MenuItem fx:id="PerfoBaner" mnemonicParsing="false" onAction="#setPerfoBaner" text="БАНЕРНАЯ СЕТКА" />
+                  <MenuItem fx:id="FotoP" mnemonicParsing="false" onAction="#setFotoP" text="ФОТО БУМАГА" />
+                  <MenuItem fx:id="TransLum" mnemonicParsing="false" onAction="#setTransLum" text="ТРАНСЛЮМ. ПВХ" />
+              </items>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </MenuButton>
+            <TextField fx:id="widthP" layoutX="252.0" layoutY="173.0" prefHeight="25.0" prefWidth="88.0" promptText="ширина в мм." />
+            <TextField fx:id="heightP" layoutX="361.0" layoutY="173.0" prefHeight="25.0" prefWidth="88.0" promptText="высота в мм." />
+            <Text fill="#4c90ff" layoutX="253.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ФОРМАТ ИЗДЕЛИЯ В ММ." wrappingWidth="201.03839111328114">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#4c90ff" layoutX="245.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" СТАНДАРТНЫЕ ФОРМАТЫ" wrappingWidth="208.20506286621094">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <MenuButton fx:id="HRulon" layoutX="500.0" layoutY="83.0" mnemonicParsing="false" text="ШИРИНА РУЛОНА" textFill="#4c90ff">
+               <items>
+                  <MenuItem fx:id="m127" mnemonicParsing="false" onAction="#setM127" text="            1,27 М.         " />
+                  <MenuItem fx:id="m137" mnemonicParsing="false" onAction="#setM137" text="            1,37 М.         " />
+                  <MenuItem fx:id="m152" mnemonicParsing="false" onAction="#setM152" text="            1,52 М.         " />
+                  <MenuItem fx:id="m160" mnemonicParsing="false" onAction="#setM160" text="            1,60 М.         " />
+               </items>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </MenuButton>
+            <TextField fx:id="quantity" layoutX="311.0" layoutY="249.0" prefHeight="25.0" prefWidth="80.0" promptText="1" />
+            <Text fill="#4c90ff" layoutX="259.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="КОЛИЧЕСТВО ИЗДЕЛИЙ" wrappingWidth="183.205078125">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="PPrint" layoutX="194.0" layoutY="277.0" prefHeight="25.0" prefWidth="80.0" promptText="М" />
+            <TextField fx:id="Ssvp" layoutX="194.0" layoutY="322.0" prefHeight="25.0" prefWidth="80.0" promptText="М" />
+            <Text fill="#4c90ff" layoutX="31.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ПЛОЩАДЬ СВ. ПОЛЯ" wrappingWidth="159.7499999999999">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="priseM" layoutX="193.0" layoutY="366.0" prefHeight="25.0" prefWidth="80.0" promptText="М" />
+            <Text fill="#4c90ff" layoutX="33.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ЦЕНА ЗА М" wrappingWidth="93.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#4c90ff" layoutX="417.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ЦЕНА ПЕЧАТИ" wrappingWidth="122.13671875">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="PrisePloterPrint" layoutX="550.0" layoutY="278.0" prefHeight="25.0" prefWidth="80.0" promptText="руб." />
+            <TextField fx:id="priseSVP" layoutX="550.0" layoutY="323.0" prefHeight="25.0" prefWidth="80.0" promptText="руб." />
+            <Text fill="#4c90ff" layoutX="416.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ЦЕНА СВ. ПОЛЯ" wrappingWidth="129.13671875">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="PriseOb" layoutX="549.0" layoutY="367.0" prefHeight="25.0" prefWidth="80.0" promptText="руб." />
+            <Text fill="#4c90ff" layoutX="416.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ЦЕНА ОБЩАЯ" wrappingWidth="106.5">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <JFXRadioButton fx:id="A2" layoutX="249.0" layoutY="81.0" text="A2" textFill="#f8f8f8">
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="f" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="A1" layoutX="327.0" layoutY="81.0" text="A1" textFill="#f8f8f8" toggleGroup="$f">
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="A0" layoutX="400.0" layoutY="81.0" text="A0" textFill="#f8f8f8" toggleGroup="$f">
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXToggleButton fx:id="dillers2" layoutX="320.0" layoutY="424.0" onAction="#Diller1" prefHeight="60.0" prefWidth="57.0" textFill="#1e2226" toggleColor="#865c01" toggleLineColor="#eba210">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXToggleButton>
+            <Text fill="#4c90ff" layoutX="279.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ДИЛЛЕРСКАЯ ЦЕНА " wrappingWidth="159.75">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="cifra" layoutX="2.0" layoutY="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="498.0" prefWidth="701.0" style="-fx-background-color: #1E2226;">
+         <children>
+            <ImageView fitHeight="285.0" fitWidth="570.0" layoutX="57.0" layoutY="123.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Znak.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D minX="570.0" minY="285.0" />
+               </viewport>
+            </ImageView>
+            <TextField fx:id="width" layoutX="552.0" layoutY="59.0" prefHeight="25.0" prefWidth="88.0" promptText="ширина в мм." />
+            <TextField fx:id="height" layoutX="444.0" layoutY="59.0" prefHeight="25.0" prefWidth="88.0" promptText="высота в мм." />
+            <Button fx:id="itog" layoutX="307.0" layoutY="403.0" mnemonicParsing="false" onAction="#click" prefHeight="24.0" prefWidth="80.0" style="-fx-background-color: #eba210;" text="РАСЧЕТ" textFill="#1e2226">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Text fill="#4c90ff" layoutX="485.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="СВОЙ ФОРМАТ" textOrigin="CENTER" wrappingWidth="119.25">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#4c90ff" layoutX="285.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ФОРМАТ БУМАГИ" wrappingWidth="138.80337524414062">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="Tirag" layoutX="168.0" layoutY="313.0" prefHeight="25.0" prefWidth="67.0" promptText=" ТИРАЖ" />
+            <TextField fx:id="print" layoutX="506.0" layoutY="207.0" prefHeight="25.0" prefWidth="67.0" />
+            <TextField fx:id="printList" layoutX="201.0" layoutY="450.0" prefHeight="25.0" prefWidth="67.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="printPrise" layoutX="423.0" layoutY="450.0" prefHeight="25.0" prefWidth="67.0" />
+            <Text fill="#4c90ff" layoutX="397.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ЦЕНА ЗА ТИРАЖ" wrappingWidth="129.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#4c90ff" layoutX="136.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ФОРМАТ ИЗДЕЛИЯ" wrappingWidth="145.705078125">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#4c90ff" layoutX="454.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="КОЛИЧЕСТВО НА ЛИСТЕ" wrappingWidth="183.205078125">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#4c90ff" layoutX="102.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ПЛОТНОСТЬ, ТИРАЖ, ЦВЕТ" wrappingWidth="208.20506286621094">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#4c90ff" layoutX="178.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ЦЕНА ЗА ЛИСТ" wrappingWidth="119.25">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="goods" layoutX="168.0" layoutY="351.0" prefHeight="25.0" prefWidth="67.0" promptText=" ТИРАЖ" />
+            <Text fill="#4c90ff" layoutX="76.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ЛИСТЫ" wrappingWidth="64.5">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#4c90ff" layoutX="71.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ИЗДЕЛИЯ" wrappingWidth="79.5">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <JFXToggleButton fx:id="dillers" layoutX="452.0" layoutY="311.0" onAction="#Diller" text="ДЛЯ ДИЛЛЕРОВ" textFill="#4c90ff" toggleColor="#865c01" toggleLineColor="#eba210">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXToggleButton>
+            <JFXRadioButton fx:id="A7E" layoutX="45.0" layoutY="61.0" text="A7" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="f1" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="A6E" layoutX="112.0" layoutY="61.0" text="A6" textFill="WHITE" toggleGroup="$f1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="A5E" layoutX="190.0" layoutY="61.0" text="A5" textFill="WHITE" toggleGroup="$f1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="A4E" layoutX="268.0" layoutY="61.0" text="A4" textFill="WHITE" toggleGroup="$f1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="A3E" layoutX="344.0" layoutY="61.0" text="A3" textFill="WHITE" toggleGroup="$f1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="a4" layoutX="84.0" layoutY="126.0" text="A4" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="f2" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="a3" layoutX="164.0" layoutY="126.0" text="A3" textFill="WHITE" toggleGroup="$f2">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="SRA3" layoutX="263.0" layoutY="126.0" text="SRA3" textFill="WHITE" toggleGroup="$f2">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="X325" layoutX="397.0" layoutY="126.0" text="325X470" textFill="WHITE" toggleGroup="$f2">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="X330" layoutX="529.0" layoutY="126.0" text="330X485" textFill="WHITE" toggleGroup="$f2">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="p80" layoutX="39.0" layoutY="212.0" text="80гр" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="f3" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="p120" layoutX="216.0" layoutY="212.0" text="120гр" textFill="WHITE" toggleGroup="$f3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="ps" layoutX="301.0" layoutY="248.0" text="САМОКЛ." textFill="WHITE" toggleGroup="$f3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="p300" layoutX="216.0" layoutY="248.0" text="300гр" textFill="WHITE" toggleGroup="$f3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="p105" layoutX="127.0" layoutY="212.0" text="105гр" textFill="WHITE" toggleGroup="$f3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="p150" layoutX="301.0" layoutY="212.0" text="150гр" textFill="WHITE" toggleGroup="$f3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="p250" layoutX="127.0" layoutY="248.0" text="250гр" textFill="WHITE" toggleGroup="$f3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="p200" layoutX="40.0" layoutY="248.0" text="200гр" textFill="WHITE" toggleGroup="$f3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="p4" layoutX="272.0" layoutY="308.0" text="4+0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="f4" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="p44" layoutX="348.0" layoutY="308.0" text="4+4" textFill="WHITE" toggleGroup="$f4">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="p1" layoutX="272.0" layoutY="357.0" text="1+0" textFill="WHITE" toggleGroup="$f4">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="p11" layoutX="348.0" layoutY="357.0" text="1+1" textFill="WHITE" toggleGroup="$f4">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <unSelectedColor>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </unSelectedColor>
+               <selectedColor>
+                  <Color red="0.9215686321258545" green="0.6352941393852234" blue="0.062745101749897" />
+               </selectedColor>
+            </JFXRadioButton>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="68.0" fitWidth="70.0" layoutX="56.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@znak%20print.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="67.0" fitWidth="70.0" layoutX="585.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@znak%20plot.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="cifraBatton" layoutX="57.0" layoutY="416.0" mnemonicParsing="false" onAction="#viginV" opacity="0.0" prefHeight="65.0" prefWidth="63.0" style="-fx-background-color: #1E2226; -fx-border-color: #ae9523; -fx-border-radius: 4;" text="ЦИФРА" textFill="#4c90ff">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="ploterBatton" layoutX="583.0" layoutY="419.0" mnemonicParsing="false" onAction="#vigin" opacity="0.0" prefHeight="60.0" prefWidth="70.0" style="-fx-background-color: #1E2226; -fx-border-color: #ae9523; -fx-border-radius: 4;" text="ПЛОТЕР" textFill="#4c90ff">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
